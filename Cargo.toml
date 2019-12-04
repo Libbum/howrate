@@ -5,4 +5,15 @@ authors = ["Tim DuBois <tim@neophilus.net>"]
 edition = "2018"
 
 [dependencies]
-raft = { version="0.6.0-alpha", default-features = false, features = ["prost-codec"] }
+raft = { version = "0.6.0-alpha", features = ["default"] }
+protobuf = "2"
+regex = "1.1"
+slog = "2.2"
+slog-stdlog = "4"
+slog-envlogger = "2.1.0"
+slog-term = "2.4.0"
+slog-async = "2.3.0"
+
+[patch.crates-io]
+raft = { git = 'https://github.com/tikv/raft-rs' }
+
